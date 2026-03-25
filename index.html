@@ -4,158 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <style>
-        /* --- General Styles --- */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #0a192f; /* Dark blue */
+            color: #ccd6f6;
         }
 
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
+        /* --- HEADER --- */
         header {
-            background: #0073e6;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
+            background: #112240;
+            padding: 1rem;
             display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0.5rem 0 0 0;
+            align-items: center;
         }
 
-        header nav ul li {
-            margin: 0 1rem;
+        /* Image (top-left corner) */
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
         }
 
-        header nav ul li a {
-            color: white;
+        header h1 {
+            margin: 0;
+            color: #64ffda;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav a {
+            color: #ccd6f6;
+            margin-left: 20px;
+            text-decoration: none;
             font-weight: bold;
         }
 
+        nav a:hover {
+            color: #64ffda;
+        }
+
+        /* --- SECTIONS --- */
         section {
             padding: 2rem;
             max-width: 900px;
             margin: 2rem auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            background: #112240;
+            border-radius: 10px;
         }
 
         h2 {
-            color: #0073e6;
+            color: #64ffda;
         }
 
-        /* --- Project Cards --- */
+        /* --- PROJECT CARDS --- */
         .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            justify-content: space-between;
         }
 
         .project {
-            flex: 1 1 280px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            flex: 1 1 250px;
+            background: #0a192f;
             padding: 1rem;
-            background-color: #f9f9f9;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 8px;
+            border: 1px solid #233554;
+            transition: 0.3s;
         }
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-color: #64ffda;
         }
 
         .project a {
             display: inline-block;
-            margin-top: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: #0073e6;
-            color: white;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #64ffda;
+            color: #0a192f;
             border-radius: 5px;
+            font-weight: bold;
         }
 
         .project a:hover {
-            background: #005bb5;
+            background: #52e0c4;
         }
 
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background: #333;
-            color: white;
-            margin-top: 2rem;
+            padding: 1rem;
+            background: #020c1b;
+            color: #8892b0;
         }
 
         @media (max-width: 600px) {
-            .projects {
+            header {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
+        <!-- 🔥 Replace image name with your file -->
+        <img src="manutd.jpg" alt="Logo" class="logo">
+
         <h1>My Portfolio</h1>
+
         <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="about">
+    <section>
         <h2>About Me</h2>
-        <p>Hello! I am a developer passionate about IoT, databases, and web development. I enjoy creating systems that combine real-world devices with web technology.</p>
+        <p>I am a developer passionate about IoT, databases, and web development.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
+
         <div class="projects">
             <div class="project">
                 <h3>IoT Weather System</h3>
-                <p>An IoT project that collects weather data using sensors and displays it on a web dashboard in real-time.</p>
-                <a href="https://github.com/yourusername/iot-weather" target="_blank">View on GitHub</a>
+                <p>Collects real-time weather data using sensors and displays it online.</p>
+                <a href="#">View Project</a>
             </div>
+
             <div class="project">
                 <h3>Database Project</h3>
-                <p>A database management system built with MySQL that stores and manages data efficiently.</p>
-                <a href="https://github.com/yourusername/database-project" target="_blank">View on GitHub</a>
+                <p>MySQL-based system for managing and organizing data.</p>
+                <a href="#">View Project</a>
             </div>
+
             <div class="project">
                 <h3>PHP Login System</h3>
-                <p>A secure login system using PHP and MySQL with registration, login, and session management.</p>
-                <a href="https://github.com/yourusername/php-login-system" target="_blank">View on GitHub</a>
+                <p>Secure login system using PHP and MySQL.</p>
+                <a href="#">View Project</a>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">My Profile</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">My GitHub</a></p>
+        <p>Email: youremail@example.com</p>
+        <p>GitHub: https://github.com/yourusername</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 My Portfolio</p>
+        <p>© 2026 My Portfolio</p>
     </footer>
+
 </body>
 </html>
