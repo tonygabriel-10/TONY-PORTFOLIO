@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #0b1f3a; /* dark blue */
+      background: #0b1f3a;
       color: #e6edf6;
     }
 
@@ -18,11 +18,6 @@
       color: #fff;
       padding: 25px;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
     }
 
     nav {
@@ -36,7 +31,6 @@
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -45,6 +39,26 @@
 
     section {
       padding: 30px;
+    }
+
+    .about-container {
+      text-align: center;
+    }
+
+    .about-container img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid #00c3ff;
+      margin-bottom: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #00c3ff;
+      color: black;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 5px;
     }
 
     .projects {
@@ -65,6 +79,12 @@
       transform: scale(1.05);
     }
 
+    .project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
     .btn {
       display: inline-block;
       margin-top: 10px;
@@ -73,17 +93,6 @@
       color: black;
       text-decoration: none;
       border-radius: 5px;
-      font-size: 14px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #00c3ff;
-      color: black;
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 5px;
-      font-size: 14px;
     }
 
     footer {
@@ -110,7 +119,10 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <p>I am a developer passionate about web development, IoT, and programming. I build projects using HTML, PHP, MySQL, and Arduino.</p>
+  <div class="about-container">
+    <img src="IMG-20240408-WA0035.jpg" alt="My Photo">
+    <p>I am a developer passionate about web development, IoT, and programming.</p>
+  </div>
 </section>
 
 <section id="skills">
@@ -129,12 +141,14 @@
   <div class="projects">
 
     <div class="project">
+      <img src="IMG-20240408-WA0035.jpg" alt="Project 1">
       <h3>IoT Weather System</h3>
       <p>Reads temperature and humidity using DHT sensor and stores data in database.</p>
       <a href="#" class="btn">View Project</a>
     </div>
 
     <div class="project">
+      <img src="IMG-20240408-WA0035.jpg" alt="Project 2">
       <h3>PHP Login System</h3>
       <p>User authentication system using PHP and MySQL.</p>
       <a href="#" class="btn">View Project</a>
@@ -154,3 +168,4 @@
 
 </body>
 </html>
+
