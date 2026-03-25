@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0073e6;
+        }
+
+        /* --- Project Cards --- */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .project {
+            flex: 1 1 280px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #0073e6;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .project a:hover {
+            background: #005bb5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .projects {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a developer passionate about IoT, databases, and web development. I enjoy creating systems that combine real-world devices with web technology.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>IoT Weather System</h3>
+                <p>An IoT project that collects weather data using sensors and displays it on a web dashboard in real-time.</p>
+                <a href="https://github.com/yourusername/iot-weather" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Database Project</h3>
+                <p>A database management system built with MySQL that stores and manages data efficiently.</p>
+                <a href="https://github.com/yourusername/database-project" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>PHP Login System</h3>
+                <p>A secure login system using PHP and MySQL with registration, login, and session management.</p>
+                <a href="https://github.com/yourusername/php-login-system" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">My Profile</a></p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">My GitHub</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio</p>
+    </footer>
+</body>
+</html>
